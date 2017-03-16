@@ -33,9 +33,11 @@ void setup() {
 }
 
 void loop() {
-  colorFade(0,0,0,0,100,0,5);
-  // Some example procedures showing how to display to the pixels:
-  colorWipe(strip.Color(0, 255, 0), 50); //Green
+  colorWipe(strip.Color(0, 100, 0), 50);
+  colorFade(0,100,0,0,0,0,5); //fades from green to black
+  delay(1000);
+  colorFade(0,0,0,0,100,0,1); //fades from black to green
+  colorWipe(strip.Color(0,0,0),50);
   rainbow(20);
   rainbowCycle(20);
 }
